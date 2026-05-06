@@ -33,13 +33,8 @@ case "$1" in
         JAVA_OPTS="$JAVA_OPTS $1"
         shift
         ;;
-    gradle | gradlew) break ;;
     *)
-        echo "usage: gradlew [gradle options] [gradle tasks]"
-        echo ""
-        echo "Option: -Dclient.encoding.override=<encoding> (only for testing purpose)"
-        echo "Property: org.gradle.client.http.socketTimeout, http.socketTimeout (default: 10000)"
-        exit 1
+        break
         ;;
 esac
 
